@@ -1,0 +1,172 @@
+body {
+    font-family: 'Poppins', sans-serif; 
+    /* background: linear-gradient(135deg, #4facfe, #00f2fe); */
+    background-image: url("img.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+ 
+/* Main Container */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    color:black;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Input Field */
+input[type="text"] {
+    padding: 12px;
+    width: 70%;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+}
+
+/* Button */
+    button {
+    padding: 12px 18px;
+    border: none;
+    background: #ff6b6b;
+    color: white;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff4757;
+} 
+
+/* Weather Display */
+    #weather {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#weather img {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+} 
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Weather Display Box */
+.weather-box {
+    margin-top: 20px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+} 
+
+/* Weather Icon */
+.weather-box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+/* Toggle Switch */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.toggle-label {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
